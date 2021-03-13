@@ -69,6 +69,12 @@ export default {
 
   mounted() {
     this.fetchArticle();
+  },
+
+  head() {
+    return {
+      title: this.article ? this.article.title + ' - Fertőrákosi Lövészklub' : 'Fertőrákosi Lövészklub'
+    }
   }
 }
 </script>

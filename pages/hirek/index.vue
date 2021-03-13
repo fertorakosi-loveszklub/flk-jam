@@ -65,6 +65,12 @@ export default {
     async fetchArticles() {
       this.articles = await this.$axios.$get('/api/articles');
     }
+  },
+
+  head() {
+    return {
+      title: 'Hírek - Fertőrákosi Lövészklub'
+    }
   }
 }
 </script>
