@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xs-12">
         <ol class="breadcrumb">
-          <li><a href="/">Főoldal</a></li>
+          <li><NuxtLink to="/">Főoldal</NuxtLink></li>
           <li class="active">Hírek</li>
         </ol>
       </div>
@@ -51,20 +51,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      articles: []
-    }
-  },
-
-  mounted() {
-    this.fetchArticles();
-  },
-
-  methods: {
-    async fetchArticles() {
-      this.articles = await this.$axios.$get('/api/articles');
-    }
+  async asyncData() {
+    const articles = await this.$axios.$get('/api/articles');
+    return {articles};
   },
 
   head() {

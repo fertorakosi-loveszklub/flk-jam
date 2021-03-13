@@ -45,7 +45,6 @@
               <li><NuxtLink to="/">Főoldal</NuxtLink></li>
               <li><NuxtLink to="/rolunk">Rólunk</NuxtLink></li>
               <li><NuxtLink to="/hirek">Hírek</NuxtLink></li>
-              <li><NuxtLink to="/galeria">Galéria</NuxtLink></li>
               <li><NuxtLink to="/dokumentumok">Dokumentumok</NuxtLink></li>
               <li><NuxtLink to="/kapcsolat">Kapcsolat</NuxtLink></li>
             </ul>

@@ -55,25 +55,13 @@
 <script>
 export default {
   async asyncData({params}) {
-    return {
-      article: null,
-      slug: params.slug
-    };
-  },
-
-  methods: {
-    async fetchArticle() {
-      this.article = await this.$axios.$get('/api/articles/' + this.slug);
-    }
-  },
-
-  mounted() {
-    this.fetchArticle();
+    const article = await this.$axios.$get('/api/articles/' + params.slug);
+    return {article};
   },
 
   head() {
     return {
-      title: this.article ? this.article.title + ' - Fertőrákosi Lövészklub' : 'Fertőrákosi Lövészklub'
+      title: this.article?.title + ' - Fertőrákosi Lövészklub'
     }
   }
 }
