@@ -1,0 +1,48 @@
+#article {
+  margin-top: -30px;
+
+  article {
+    margin: 0 auto;
+
+    @media (min-width: 1200px) {
+      width: 80%;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    .article-info {
+      font-size: .85em;
+      margin-bottom: 30px;
+
+      img,
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .separator {
+        margin: 0 5px;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.article-list {
+  margin: 15px;
+}
+
+.social {
+  margin-bottom: 15px;
+}

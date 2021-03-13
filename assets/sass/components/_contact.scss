@@ -1,0 +1,35 @@
+#map {
+  height: 300px;
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: -75px;
+    height: 500px;
+  }
+}
+
+#contact-form {
+  background: $gray-lighter;
+  padding: 15px 30px;
+
+  h2 {
+    margin-top: 15px;
+  }
+}
+
+#info-box {
+  h3 {
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+
+  .info-title {
+    display: inline-block;
+    width: 90px;
+  }
+
+  .info-content {
+    display: inline-block;
+    margin-left: 1em;
+  }
+}

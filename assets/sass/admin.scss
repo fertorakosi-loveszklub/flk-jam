@@ -1,0 +1,145 @@
+header {
+  position: relative;
+
+  nav {
+    background-color: #1e88e5;
+  }
+
+  nav .nav-wrapper {
+    text-align: center;
+    position: relative;
+    height: 100%;
+  }
+
+  a.button-collapse.top-nav.full {
+    line-height: 56px;
+    position: absolute;
+    text-align: center;
+    height: 48px;
+    width: 48px;
+    left: 7.5%;
+    top: 0;
+    float: none;
+    margin-left: 1.5rem;
+    color: #fff;
+    font-size: 36px;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  header,
+  main {
+    padding-left: 300px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  nav.top-nav {
+    height: 120px;
+    box-shadow: none;
+  }
+
+  .page-title {
+    font-size: 36px;
+    line-height: 120px;
+  }
+}
+
+.side-nav {
+  li.active {
+    background-color: #1e88e5 ;
+    a {
+      color: white;
+    }
+  }
+}
+
+.input-field {
+  margin-top: 1.5rem;
+}
+
+.fixed-action-btn {
+  bottom: 45px;
+  right: 30px;
+}
+
+td form button{
+  margin-left: 15px;
+}
+
+td {
+  form  {
+    display: inline-block;
+  }
+}
+
+/** Responsive tables */
+@media (max-width: 991px) {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding: 10px;
+
+    &.first-on-mobile {
+      border-top: 1px solid #eee;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+
+.alert {
+  padding: 10px 15px;
+  color: white;
+  margin: 15px 0;
+
+  &.alert-info {
+    background-color: #90caf9;
+    color: black;
+  }
+
+  &.alert-danger {
+    background-color: #ef5350;
+  }
+
+  &.alert-success {
+    background-color: #4caf50;
+  }
+
+  &.alert-warning {
+    background-color: #fff176;
+    color: black;
+  }
+}

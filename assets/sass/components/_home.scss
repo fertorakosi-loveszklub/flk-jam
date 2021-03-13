@@ -1,0 +1,105 @@
+@media (min-width: $screen-md-min) {
+  #slider {
+    position: relative;
+    z-index: 1;
+
+    .carousel-inner {
+      margin-top: -45px;
+
+      .item {
+        position: relative;
+
+        .carousel-caption {
+          text-shadow: 1px 1px 15px #444;
+
+          h2 {
+            font-size: 3.75em;
+          }
+        }
+
+        &:nth-of-type(1) {
+          .carousel-caption {
+            padding: 0;
+            left: auto;
+            top: auto;
+            bottom: 6vw;
+            right: 10vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+#cta-container {
+  text-align: center;
+  margin-top: -35px;
+  position: relative;
+  z-index: 3;
+
+  #contact-cta {
+    color: $body-bg;
+    font-size: 1.75em;
+    background: $brand-info;
+    padding: 15px 45px;
+    font-family: $font-family-sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover,
+    &:active,
+    &:focus {
+      padding-left: 60px;
+      padding-right: 60px;
+      background: darken($brand-info, 20%);
+    }
+  }
+}
+
+#home {
+  h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+
+  #home--support {
+    .large {
+      font-size: 1.4em;
+    }
+  }
+
+  #home--services {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  article {
+    h1 {
+      font-size: 1.6em;
+      margin-bottom: 0;
+    }
+
+    time {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  #slider {
+    display: none;
+  }
+
+  #cta-container {
+    margin-top: 0;
+  }
+
+  #title-container {
+    h1 {
+      margin-top: 45px;
+      margin-bottom: 30px;
+    }
+  }
+}

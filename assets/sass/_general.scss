@@ -1,0 +1,32 @@
+a,
+button {
+  transition: all .2s;
+}
+
+.btn-basic {
+  background-color: $text-color;
+  color: $body-bg;
+  height: 2.6em;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $body-bg;
+  }
+}
+
+
+main {
+  margin-top: 30px;
+}
+
+.loading-indicator {
+  text-align: center;
+  animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.15);}
+  100% {transform: scale(1);}
+}

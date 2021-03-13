@@ -1,0 +1,92 @@
+header {
+  text-align: center;
+  position: relative;
+  z-index: 7;
+
+  #top-bar {
+    width: 100%;
+    height: 10px;
+    background-color: $text-color;
+  }
+
+  #title-row {
+    position: relative;
+    padding-top: 15px;
+
+    @media (min-width: $screen-sm-min) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    #logo-container {
+      text-align: right;
+
+      a {
+        display: inline-block;
+
+        #logo {
+          max-width: 100px;
+        }
+      }
+    }
+
+    #title-container {
+      @media (min-width: $screen-sm-min) {
+        text-align: left;
+        padding-top: 10px;
+      }
+
+      h1 {
+        @media (max-width: $screen-sm-max) {
+          font-size: 2.85em;
+        }
+
+        span {
+          display: block;
+
+          &.row-1 {
+            font-size: .8em;
+            letter-spacing: 8px;
+          }
+
+          &.row-2 {
+            font-size: 1.2em;
+            @media (min-width: $screen-sm-min) {
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+
+    #user-box {
+      position: absolute;
+      top: 0;
+      right: 15px;
+
+      a {
+          vertical-align: middle;
+
+          #hover-indicator {
+            display: inline-block;
+            transition: all .2s;
+            width: 0;
+            overflow: hidden;
+            vertical-align: middle;
+          }
+
+          &:hover,
+          &:active,
+          &:focus {
+            #hover-indicator {
+              width: 15px;
+            }
+          }
+        }
+
+      #user-menu {
+
+      }
+    }
+  }
+}

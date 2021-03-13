@@ -1,0 +1,47 @@
+// Body
+$body-bg: white;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: #4564ae;
+$brand-info: #4564ae;
+$brand-success: #2ab27b;
+$brand-warning: #FFD36A;
+$brand-danger:  #ff6961;
+
+// Typography
+$font-family-sans-serif: "Noto Sans", sans-serif;
+$font-family-serif: "Noto Serif", serif;
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$text-color: #3e454c;
+$headings-font-family: $font-family-serif;
+
+// Navbar
+$navbar-default-bg: #fff;
+$navbar-default-link-color: $brand-primary;
+
+$navbar-default-link-hover-bg: $brand-primary;
+$navbar-default-link-hover-color: #fff;
+$navbar-default-link-active-bg: $navbar-default-link-hover-bg;
+$navbar-default-link-active-color: $navbar-default-link-hover-color;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;

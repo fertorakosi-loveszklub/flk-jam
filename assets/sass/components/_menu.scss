@@ -1,0 +1,112 @@
+#main-menu-toggle {
+  position: fixed;
+  left: 15px;
+  top: 10px;
+  z-index: 2;
+
+  #toggle--close {
+    display: none;
+  }
+
+  &.toggled {
+    #toggle--close {
+      display: block;
+    }
+
+    #toggle--open {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  #main-menu-row {
+    position: fixed;
+    top: 46px;
+    left: 15px;
+    right: 15px;
+
+    nav {
+      overflow: hidden;
+      transition: max-height .4s;
+      max-height: 0;
+
+      &.toggled {
+        max-height: 275px;
+      }
+
+      ul {
+        display: block;
+        width: 100%;
+        background: $text-color;
+        padding: 0;
+
+        li {
+          display: block;
+          list-style-type: none;
+
+          border-bottom: 1px solid lighten($text-color, 5%);
+
+          &:last-of-type {
+            border-bottom: none;
+          }
+
+          a {
+            display: block;
+            padding: 10px 0;
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  #main-menu-row {
+    nav {
+      display: block;
+      margin: 0 auto;
+
+      ul {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        background: $brand-primary;
+
+        li {
+          text-align: center;
+          display: inline-block;
+          list-style-type: none;
+
+          a {
+            padding: 20px 20px;
+            display: block;
+            background: $brand-primary;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            @media (min-width: $screen-md-min) {
+              padding-left: 40px;
+              padding-right: 40px;
+            }
+
+            @media (min-width: $screen-lg-min) {
+              padding-left: 45px;
+              padding-right: 45px;
+              font-size: 1.2em;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+              background: darken($brand-primary, 15%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
