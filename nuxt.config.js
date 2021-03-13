@@ -57,7 +57,9 @@ export default {
       return axios.get('https://admin.fertorakosi-loveszklub.hu/api/articles').then(res => {
         return res.data.map(article => `/hirek/${article.slug}`);
       });
-    }
+    },
+
+    fallback: '404.html'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
