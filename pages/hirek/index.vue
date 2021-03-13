@@ -51,8 +51,8 @@
 
 <script>
 export default {
-  async asyncData() {
-    const articles = await this.$axios.$get('/api/articles');
+  async asyncData({ $axios }) {
+    const articles = await $axios.$get('/api/articles');
     return {articles};
   },
 
