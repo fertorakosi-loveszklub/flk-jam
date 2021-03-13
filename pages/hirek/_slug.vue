@@ -61,7 +61,12 @@ export default {
 
   head() {
     return {
-      title: this.article?.title + ' - Fertőrákosi Lövészklub'
+      title: this.article?.title + ' - Fertőrákosi Lövészklub',
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: this.article?.title + ' - Fertőrákosi Lövészklub'},
+        { hid: 'description', name: 'description', content: this.article?.short_lead },
+        { hid: 'og:description', name: 'og:description', content: this.article?.short_lead},
+      ]
     }
   }
 }
