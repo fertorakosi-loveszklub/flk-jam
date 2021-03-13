@@ -9,11 +9,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-   "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/axios": "^5.12.5",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "bootstrap-sass": "^3.4.1",
     "fibers": "^5.0.0",
     "sass": "^1.32.8",

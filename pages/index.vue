@@ -14,9 +14,9 @@
     </section>
 
     <div id="cta-container">
-      <button id="contact-cta" class="btn" data-toggle="modal" data-target="#contact-modal">
+      <NuxtLink to="/kapcsolat" id="contact-cta" class="btn" data-toggle="modal" data-target="#contact-modal">
         <i class="fa fa-fw fa-envelope-o"></i> Érdeklődöm
-      </button>
+      </NuxtLink>
     </div>
 
     <main>

@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -15,6 +17,7 @@ export default {
       { hid: 'og:title', name: 'og:title', content: 'Fertőrákosi Lövészklub'},
       { hid: 'og:description', name: 'og:description', content: 'Fertőrákosi Lövészklub: légfegyveres lövészet, sportlövészet, íjászat kezdőknek és haladóknak egyaránt.'},
       { hid: 'og:image', name: 'og:image', content: 'https://www.fertorakosi-loveszklub.hu/img/fb_share.jpg'},
+      { hid: 'fb:pages', name: 'fb:pages', content: '1513962075484348'},
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/img/icon.png' },
@@ -37,6 +40,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -47,6 +51,14 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
+
+  generate: {
+    routes() {
+      return axios.get('https://admin.fertorakosi-loveszklub.hu/api/articles').then(res => {
+        return res.data.map(article => `/hirek/${article.slug}`);
+      });
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -63,4 +75,8 @@ export default {
       browserBaseURL: process.env.BASE_URL
     }
   },
+
+  googleAnalytics: {
+    id: 'UA-85546283-1'
+  }
 }

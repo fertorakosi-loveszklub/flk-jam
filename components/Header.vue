@@ -22,14 +22,14 @@
         </div>
 
         <div id="user-box">
-          <a href="#TODO" class="btn btn-basic">
+          <a href="https://admin.fertorakosi-loveszklub.hu/facebook/login" class="btn btn-basic" target="_blank">
             <i class="visible-xs fa fa-fw fa-sign-in"></i>
             <i class="hidden-xs fa fa-fw fa-facebook"></i>
             <span class="hidden-xs">Bejelentkezés</span>
 
             <span id="hover-indicator" class="hidden-xs">
-                            <i class="fa fa-sign-in fa-fw"></i>
-                        </span>
+                <i class="fa fa-sign-in fa-fw"></i>
+            </span>
           </a>
         </div>
       </div>
